@@ -156,7 +156,9 @@ if __name__ == "__main__":
 ![Bash](https://img.shields.io/badge/language-Bash-blue)
 ```bash
 bash
-# Save file: Ctrl+O -> Enter -> Ctrl+X
+Save file:
+#[For nano] Ctrl+O -> Enter -> Ctrl+X
+#[For vim] ESC -> type ":wq" -> Enter
 chmod +x get_ble_keys.py
 ```
 
