@@ -52,8 +52,7 @@ pip3 install pybluez
 #### Arch Linux
 ```bash
 sudo pacman -Syu
-sudo pacman -S bluez bluez-utils python python-pip
-pip3 install pybluez
+sudo pacman -S bluez bluez-utils python python-pip python-pybluez
 ```
 
 ### 3. Start Bluetooth Service
