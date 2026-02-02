@@ -77,8 +77,6 @@ Python script code is sourced from GitHub open-source project [d4rken-org/capod]
 ```bash
 nano get_ble_keys.py
 ```
-<br>
-
 #### or
 ```bash
 vim get_ble_keys.py
