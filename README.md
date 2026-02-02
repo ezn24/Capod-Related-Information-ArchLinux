@@ -13,7 +13,7 @@ This guide provides a method to extract Bluetooth keys (IRK and ENC_KEY) from Ap
 ### Required Software Environment
 
   - **[VMware Workstation Player](https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion)**
-  - **[Ubuntu 24.04 LTS](https://ubuntu.com/download/desktop)**
+  - **[Ubuntu 24.04 LTS](https://ubuntu.com/download/desktop)** or **[Arch Linux](https://archlinux.org/)**
   - **Python 3:** (Pre-installed with Ubuntu)
 
 ### Critical Prerequisites
@@ -26,11 +26,12 @@ This guide provides a method to extract Bluetooth keys (IRK and ENC_KEY) from Ap
 <br>
 
 ## 🔧 Environment Configuration Steps
+
 ### 1. Verify Bluetooth Adapter Recognition
 
 ![Bash](https://img.shields.io/badge/language-Bash-blue)
 ```bash
-# Run in Ubuntu terminal, must see Bluetooth device information
+# Run in Ubuntu or Arch Linux terminal, must see Bluetooth device information
 lsusb | grep -i bluetooth
 # Expected output: Bus 001 Device 004: ID 0a5c:21e8 Broadcom Corp. BCM20702A0 Bluetooth 4.0
 ```
@@ -38,9 +39,20 @@ lsusb | grep -i bluetooth
 ### 2. Install Required Software Packages
 
 ![Bash](https://img.shields.io/badge/language-Bash-blue)
+<br>
+
+#### Ubuntu
 ```bash
 sudo apt update && sudo apt upgrade -y
 sudo apt install bluez bluez-tools blueman python3 python3-pip libbluetooth-dev
+pip3 install pybluez
+```
+<br>
+
+#### Arch Linux
+```bash
+sudo pacman -Syu
+sudo pacman -S bluez bluez-utils python python-pip
 pip3 install pybluez
 ```
 
@@ -65,6 +77,12 @@ Python script code is sourced from GitHub open-source project [d4rken-org/capod]
 ![Bash](https://img.shields.io/badge/language-Bash-blue)
 ```bash
 nano get_ble_keys.py
+```
+<br>
+
+#### or
+```bash
+vim get_ble_keys.py
 ```
 
 ### Paste the Following Code
